@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
             ->has(Link::factory()->count(500))
             ->create([
                 'name' => 'User',
-                'email' => 'user@test.com'
+                'email' => 'user@test.com',
             ]);
     }
 }

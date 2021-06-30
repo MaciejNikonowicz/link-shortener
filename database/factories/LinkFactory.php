@@ -25,15 +25,16 @@ class LinkFactory extends Factory
     {
         return [
             'user_id' => User::factory(),
-            'url' => $this->faker->url(),
-            'slug' => Str::random(6)
+            'url' => $this->faker->url,
+            'slug' => Str::random(6),
+            'is_enabled' => true,
         ];
     }
 
     public function ofUser(User $user)
     {
         return $this->state([
-            'user_id' => $this->id
+            'user_id' => $user->id,
         ]);
     }
 }
